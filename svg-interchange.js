@@ -8,6 +8,7 @@
  * @author  Matthew Cross <blacklightgfx@gmail.com>
  * @package SVG-Interchange
  * @version 1.0
+ * @license The MIT License (MIT)
  */
 
 // Helper object to prevent global namespace pollution
