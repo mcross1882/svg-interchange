@@ -11,9 +11,9 @@
  */
 
 // Helper object to prevent global namespace pollution
-window.Lib = window.Lib || {};
+window.mcross1882 = window.mcross1882 || {};
 
-(function(lib) {
+(function(mc) {
 
     /**
      * Constructor which binds the registerEvents method
@@ -54,10 +54,7 @@ window.Lib = window.Lib || {};
         var images = document.getElementsByTagName("img");
         var fallback = false;
         for (var idx in images) {
-            if (
-                typeof images[idx] == 'object'
-                && (fallback = images[idx].getAttribute("data-fallback"))
-            ) {
+            if (typeof images[idx] == 'object' && (fallback = images[idx].getAttribute("data-fallback"))) {
                 images[idx].setAttribute("src", fallback);
             }
         }
@@ -115,7 +112,7 @@ window.Lib = window.Lib || {};
 
         var M = ua.match('/(' + browserNames.join("|") + ')\/?\s*(\.?\d+(\.\d+)*)/i');
 
-        if (M && (tem = ua.match(/version\/([\.\d]+)/i))!= null) {
+        if (M && (tem = ua.match('/version\/([\.\d]+)/i'))!= null) {
             M[2] = tem[1];
         }
 
@@ -128,7 +125,7 @@ window.Lib = window.Lib || {};
     /**
      * Singleton reference for the SVGInterchange class
      */
-    lib.SVGInterchangeEntity = false;
+    mc.SVGInterchangeEntity = false;
 
     /**
      * Global helper method which invokes SVGInterchange in
@@ -136,11 +133,11 @@ window.Lib = window.Lib || {};
      *
      * @return SVGInterchange
      */
-    lib.SVGInterchange = function() {
-        if (!lib.SVGInterchangeEntity) {
-            lib.SVGInterchangeEntity = new SVGInterchange();
+    mc.SVGInterchange = function() {
+        if (!mc.SVGInterchangeEntity) {
+            mc.SVGInterchangeEntity = new SVGInterchange();
         }
-        return lib.SVGInterchangeEntity;
+        return mc.SVGInterchangeEntity;
     }
 
-})(window.Lib);
+})(window.mcross1882);

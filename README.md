@@ -5,10 +5,11 @@ pure vanilla JavaScript and requires no third party libraries and is cross-brows
 in your HTML header...
 
 ```html
+<script type="text/javascript" src="/js/svg-interchange.js"></script>
 <script type="text/javascript">
-  (function(lib) {
-    lib.SVGInterchange();
-  })(window.Lib);
+  (function(mc) {
+    mc.SVGInterchange();
+  })(window.mcross1882);
 </script>
 ```
 
